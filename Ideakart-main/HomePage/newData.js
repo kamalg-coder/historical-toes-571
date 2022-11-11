@@ -7,7 +7,7 @@ getData.forEach(function(elem){
     i1.setAttribute("class","fa-solid fa-cart-shopping")
     const a1 = document.createElement('a');
     a1.innerText = "View Now" ;
-    a1.setAttribute("href","./product_page/productPage.html")                  //add view now anchor tag    
+    a1.setAttribute("href","../product_page/productPage.html")                  //add view now anchor tag    
     div1.append(i1,a1) ;
     a1.addEventListener("click",function(){
         productFunction(elem) ;
@@ -23,7 +23,7 @@ getData.forEach(function(elem){
     i3.setAttribute("class","fa-solid fa-list")
     const a3 = document.createElement('a');
     a3.innerText = "More details" ;
-    a3.setAttribute("href","./product_page/productPage.html")                  //add More Details anchor tag
+    a3.setAttribute("href","../product_page/productPage.html")                  //add More Details anchor tag
     div3.append(i3,a3) ;
     a3.addEventListener("click",function(){
         productFunction(elem) ;
@@ -50,7 +50,7 @@ getData.forEach(function(elem){
 
     const a2 = document.createElement('a');
     a2.append(image) ;
-    a2.setAttribute("href","./product_page/productPage.html")            //Add Innerview Anchor
+    a2.setAttribute("href","../product_page/productPage.html")            //Add Innerview Anchor
     a2.addEventListener("click",function(){
         productFunction(elem) ;
     })
