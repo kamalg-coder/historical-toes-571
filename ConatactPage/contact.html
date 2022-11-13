@@ -4,14 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
-    <link rel="stylesheet" href="homepage.css" />
+    <title>Contact Us</title>
     <link rel="stylesheet" href="../Navbar/navbar.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="stylesheet" href="../about/about.css" />
-    <script
-      src="https://kit.fontawesome.com/ed125d3835.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div id="navbar">
@@ -22,7 +18,7 @@
         <div>
           <input type="text" placeholder="Search" id="search" />
           <div id="button">
-            <a href="../SearchPage/searchPage.html" onclick="sclick()">Search</a>
+            <a href="../SearchPage/searchPage.html">Search</a>
           </div>
         </div>
         <div id="ultra">
@@ -33,12 +29,47 @@
         </div>
       </div>
     </div>
-    <div id="topResults"><h3>Top Reads</h3></div>
-    <!-- Container -->
-    <div id="container"></div>
+
+    <!-- Individual Part -->
+
+    <div id="bgImage">
+      <div id="containerC">
+        <p>You can contact our team by filling this form -</p>
+        <div>
+          <div>
+            <h4>Firstname *</h4>
+            <input type="text" placeholder="Please enter your firstname *" />
+          </div>
+          <div>
+            <h4>Lastname *</h4>
+            <input type="text" placeholder="Please enter your lastname *" />
+          </div>
+        </div>
+        <div>
+          <div>
+            <h4>Email *</h4>
+            <input type="text" placeholder="Please enter your email *" />
+          </div>
+          <div>
+            <h4>Phone *</h4>
+            <input type="text" placeholder="Please enter your phone" />
+          </div>
+        </div>
+        <div>
+          <h4>Message *</h4>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="5"
+            placeholder="Message for me *"
+          ></textarea>
+        </div>
+        <button>Send Message</button>
+      </div>
+    </div>
 
     <!-- About Page -->
-
     <div id="ul">
       <ul>
         <p>Get To Know Us</p>
@@ -53,26 +84,4 @@
     </div>
   </body>
 </html>
-<script src="rawData.js"></script>
-<script src="newData.js"></script>
 <script src="../Navbar/navbar.js"></script>
-<script>
-   const url = `https://morning-bastion-62431.herokuapp.com/api/product`
-  let search=document.getElementById('search');
-  search.addEventListener('keypress',async(e)=>{
-    let res = await fetch(`${url}/?q=${search.value}&_limit=10`)
-    res = await res.json()
-    if(e.key=="Enter"){
-      localStorage.setItem("searchValueData",JSON.stringify(res))
-      localStorage.setItem("searchValue",JSON.stringify(search.value))
-      window.location.href="../SearchPage/searchPage.html"
-    }
-  })
-  let sclick=async()=>{
-    let res = await fetch(`${url}/?q=${search.value}&_limit=10`)
-    res = await res.json()
-    localStorage.setItem("searchValueData",JSON.stringify(res))
-    localStorage.setItem("searchValue",JSON.stringify(search.value))
-    window.location.href="../SearchPage/searchPage.html"
-  }
-</script>

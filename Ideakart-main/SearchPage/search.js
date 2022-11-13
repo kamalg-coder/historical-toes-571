@@ -13,11 +13,12 @@ let s_click = async () =>{
         cont = document.getElementById('container');
         cont.textContent = null;
         
-    }else {        
+    }else { 
+
         randerDom(res)
         const noresult = document.getElementById('noresult');
         noresult.innerHTML = null
-        
+        console.log(res)
     }
 }
 // when we enter this function is invoke.
@@ -102,3 +103,4 @@ if(searchValueData.length==0){
 }else{
     randerDom(searchValueData)
 }
+
